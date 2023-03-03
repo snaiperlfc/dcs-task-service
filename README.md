@@ -19,13 +19,13 @@ the containers are running using the following command.
 docker-compose ps
 ```
 
-Access Grafana via your web browser at `http://localhost:8080`
+Access Grafana via your web browser at `http://localhost:3000`
 
 Enter the credentials below to authenticate.
 
 ```text
     Username: admin
-    Password: password
+    Password: admin
  ```
 
 After signing in, there are two dashboards available for you to start monitoring the different applications. You can
@@ -34,15 +34,7 @@ how a JVM application is running. This dashboard has been designed specifically 
 an `application` and either a single `instance` or `all` instances. When selecting `all` instances, the dashboard will
 create a panel for each `instance` of your chosen `application`.
 
-![Micrometer JVM Statistics](https://i.imgur.com/6Yl6E3K.png)
-
-In the screenshot above, you can see a few of the metrics that are visible for a single instance of the `user-service`.
-Notice how the *CPU Usage* is near 100%. This is because the shell script for parallel execution is being used to scale
-test the social network. You can try this by running the script locally on your machine.
-
-```bash
-sh ./deployment/sbin/generate-parallel.sh
-```
+![Micrometer JVM Statistics](/grafana.png)
 
 Create new task run the following commands:
 
