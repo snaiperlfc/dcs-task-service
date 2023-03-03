@@ -35,3 +35,4 @@ build/
 /.mvn/
 /data-mongo/
 /grafana-data/
+/config/grafana-data/
